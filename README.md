@@ -23,7 +23,7 @@ So you must add these yourself. There are 3 manual paths to change:
 
 https://github.com/rfaile313/alfred-gpt/blob/63942ae471c2adb630de8a1c5f87cb4b42917cd9/main.py#L11
 
-https://github.com/rfaile313/alfred-gpt/blob/63942ae471c2adb630de8a1c5f87cb4b42917cd9/main.py#L120
+https://github.com/rfaile313/alfred-gpt/blob/1cd0a02a9b2d88aca31c53baae564c7b7189bf16/main.py#L120
 
 And in the Alfred workflow itself: 
 
