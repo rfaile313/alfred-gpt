@@ -117,7 +117,7 @@ HTML = '''
 
 final_html = HTML % choice
 
-file_name = f"/path/to/the/directory/where/this/file/is/response_{get_current_date()}_{gen_uuid()}.html"
+file_name = f"/path/to/the/directory/that/holds/main.py/response_{get_current_date()}_{gen_uuid()}.html"
 
 with open(f"{file_name}", "w") as file:
     file.write(final_html)
