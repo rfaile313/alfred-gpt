@@ -1,6 +1,11 @@
 # alfred-gpt
 Alfred GPT lookup 
 
+## Requirements:
+
+`python3` > 3.6
+`requests` module (`python3 -m pip install requests`)
+
 ## How to use:
 
 1. Clone this repository and double click the "GPT-3 Lookup.alfredworkflow" file to add it to Alfred.
