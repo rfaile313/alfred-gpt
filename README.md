@@ -3,7 +3,9 @@ Alfred GPT lookup
 
 ## How to use:
 
-1. **You must add an API KEY** to config.json:
+1. Clone this repository and double click the "GPT-3 Lookup.alfredworkflow" file to add it to Alfred.
+
+2. **You must add an API KEY** to config.json:
 
 ```
 {
@@ -15,7 +17,7 @@ Alfred GPT lookup
 ```
 You can also change the model, temperature, or tokens here. Refer to the OpenAI docs for more information.
 
-2. Unfortunately because this is run through alfred, the tool requires absolute paths which are not the same at runtime (meaning trying to find them with tools like python's `os` module will not work).
+3. Unfortunately because this is run through alfred, the tool requires absolute paths which are not the same at runtime (meaning trying to find them with tools like python's `os` module will not work).
 
 So you must add these yourself. There are 3 manual paths to change:
 
