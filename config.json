@@ -1,0 +1,6 @@
+{
+	"API_KEY" : "YOUR_API_KEY_GOES_HERE",
+	"MODEL" : "text-davinci-003",
+	"TEMPERATURE" : 0.0,
+	"MAX_TOKENS" : 1000
+}
