@@ -4,6 +4,7 @@ Alfred GPT lookup
 ## Requirements:
 
 `python3` > 3.6
+
 `requests` module (`python3 -m pip install requests`)
 
 ## How to use:
