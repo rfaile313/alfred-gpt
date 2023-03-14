@@ -13,14 +13,8 @@ Alfred GPT lookup
 
 2. **You must add an API KEY** to config.json:
 
-```
-{
-	"API_KEY" : "YOUR_API_KEY_GOES_HERE",
-	"MODEL" : "text-davinci-003",
-	"TEMPERATURE" : 0.0,
-	"MAX_TOKENS" : 1000
-}
-```
+https://github.com/rfaile313/alfred-gpt/blob/53245728e4087252cab76c555ec4a18153ef1210/config.json#L1-L6
+
 You can also change the model, temperature, or tokens here. Refer to the OpenAI docs for more information.
 
 3. Unfortunately because this is run through alfred, the tool requires absolute paths which are not the same at runtime (meaning trying to find them with tools like python's `os` module will not work).
