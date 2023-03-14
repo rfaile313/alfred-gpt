@@ -11,7 +11,7 @@ Alfred GPT lookup
 
 1. Clone this repository and double click the "GPT-3 Lookup.alfredworkflow" file to add it to Alfred.
 
-2. **You must add an API KEY** to config.json:
+2. **You must add an [API KEY](https://help.openai.com/en/articles/4936850-where-do-i-find-my-secret-api-key)** to config.json:
 
 https://github.com/rfaile313/alfred-gpt/blob/53245728e4087252cab76c555ec4a18153ef1210/config.json#L1-L6
 
