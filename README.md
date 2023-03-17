@@ -19,17 +19,13 @@ You can also change the model, temperature, or tokens here. Refer to the OpenAI 
 
 3. Unfortunately because this is run through alfred, the tool requires absolute paths which are not the same at runtime (meaning trying to find them with tools like python's `os` module will not work).
 
-So you must add these yourself. There are 3 manual paths to change:
+So you must add these yourself. **There are 2 manual paths to change.** One in the code:
 
-https://github.com/rfaile313/alfred-gpt/blob/63942ae471c2adb630de8a1c5f87cb4b42917cd9/main.py#L11
+https://github.com/rfaile313/alfred-gpt/blob/54681e344ce3cd3d19c0047ede1c23e6bed71742/main.py#L12
 
-example: `CONFIG_PATH="/Users/rfaile313/alfred-gpt/config.json"`
+example: `SOURCE_DIR="/Users/rfaile313/alfred-gpt"`
 
-https://github.com/rfaile313/alfred-gpt/blob/1cd0a02a9b2d88aca31c53baae564c7b7189bf16/main.py#L120
-
-example: `file_name = f"/Users/rfaile313/alfred-gpt/response_{get_current_date()}_{gen_uuid()}.html"`
-
-And in the Alfred workflow itself: 
+And one in the Alfred workflow itself: 
 
 <img width="543" alt="Screenshot 2023-03-14 at 12 55 46 PM" src="https://user-images.githubusercontent.com/13829168/225095458-0284b092-4e0e-42b0-ae5f-5410c88ec9cd.png">
 
