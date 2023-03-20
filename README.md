@@ -33,6 +33,8 @@ And one in the Alfred workflow itself:
 
 example: `/opt/homebrew/bin/python3 /Users/rfaile313/alfred-gpt/main.py "$1"`
 
+Note: your python3 path may be different than `/opt/homebrew/bin/python3` -- you can check in your terminal with $`which python3`
+
 
 
 
