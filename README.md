@@ -1,5 +1,9 @@
 # alfred-gpt
-Alfred GPT lookup 
+A convinient way to call GPT using [Alfred](https://www.alfredapp.com/). This workflow sends an OpenAI/GPT request off and opens the response in a new browser tab when it's done. The output is also saved as an HTML document for later referencing. 
+
+
+https://user-images.githubusercontent.com/13829168/229192246-7a50bd2d-9356-4b0e-a74d-7df8c8837d0a.mov
+
 
 ## Requirements:
 
