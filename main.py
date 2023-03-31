@@ -53,7 +53,6 @@ else:
     response = r.json()
     choice = response['choices'][0]['text']
 
-
 HTML = '''
 <!DOCTYPE html>
 <html lang="en">
@@ -63,7 +62,8 @@ HTML = '''
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GPT3-Response - ''' + str(get_current_date()) + '-' + str(gen_uuid()) +'''</title>
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/monokai-sublime.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
     <style>
       body {
@@ -87,26 +87,15 @@ HTML = '''
         overflow-y: auto;
         margin: 0 auto;
       }
+   
       .request {
         font-weight: 800px;
-        background-color: #d5d8de;
+        background-color: #404142;
         padding: 1rem;
-      }
-      .btn,
-      img {
-        background-color: none;
-        padding: 0;
-        margin: 0;
-        float: right;
-        font-size: 0.8rem;
-      }
-      .btn img {
-        height: 20px;
-        width: 20px;
       }
       .tokens {
         font-size: 0.9rem;
-        font-color: #8c8f94;
+        color: #5a5a5a;
         text-align: center;
       }
       .copy-wrapper {
@@ -120,35 +109,37 @@ HTML = '''
         transform: translate(-50%, 0);
         opacity: 0;
         transition: all 0.5s;
-        font-size: 14px;
-        color: #4caf50; 
+        font-size: 18px;
+        font-weight: bold;
+        color: #4caf50;
       }
       .copied-notification.show {
         transform: translate(-50%, 20px);
         opacity: 1;
       }
+      .nohover:hover {
+        background-color: transparent;
+      }
+      .prompt-text{
+        color:whitesmoke;
+      }
     </style>
 </head>
-
  <body>
     <div class="container">
       <div class="request">
         <div class="copy-wrapper">
-        <strong>Copy:  </strong>
-        <button class="btn" onclick="copyText()">
-            <img
-            src="https://s0.wp.com/wp-content/themes/a8c/wpsupport2/i/clipboard.svg"
-            alt="Copy to clipboard"
-            />
+        <button class="pure-button pure-button-primary" onclick="copyText()">
+        <strong>🗒️ Copy</strong>
         </button>
         <span class="copied-notification" id="copiedNotification">Copied!</span>
         </div>
-
-      <strong> || Prompt: </strong>
-      ''' + data["prompt"] + '''
+      <strong class="pure-button nohover"> Prompt: </strong>
+      <span class="prompt-text">''' + data["prompt"] + '''</span>
             </div>
-      <pre id="myCode">
-          ''' + html.escape(str(choice), quote="True") + '''
+
+      <pre id="myCode" >
+      ''' + html.escape(str(choice), quote="True") + '''
       </pre>
       <div class="tokens">
         Total tokens used: ''' + str(response['usage']['total_tokens']) + '''
@@ -167,7 +158,6 @@ HTML = '''
         textArea.remove();
         if (copySuccessful) showCopiedNotification();
 }
-
 function showCopiedNotification() {
     var notification = document.getElementById("copiedNotification");
     notification.classList.add("show");
